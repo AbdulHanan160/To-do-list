@@ -14,14 +14,23 @@ const addtask = (input) => {
                 </div>`
     newtask.classList.add("task-list")
     list.appendChild(newtask)
-
-   
+  
 statuschange()
 
 }
 
 btn.addEventListener("click", () => {
-    addtask(input_task.value)
+    if(input_task.value==""){
+        document.querySelector(".creat").style.outline="1.5px solid red"
+        document.querySelector(".creat input").placeholder="Please fill out"
+    }
+    else{
+        document.querySelector(".creat").style.outline="none"
+        document.querySelector(".creat input").placeholder="Write task"
+        addtask(input_task.value)
+    }
+     
+    input_task.value=""
 
 })
 
