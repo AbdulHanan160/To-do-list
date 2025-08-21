@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(rgb(12, 27, 105), rgb(88, 9, 190));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container{
+    height: 75vh;
+    width: 30vw;
+    background-color: white;
+    border-radius: 12px;
+}
+.tittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.8rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.tittle img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.creat{
+   margin-top: 0.5rem;
+    align-items: center;
+    /* border: 1.5px solid black; */
+    border-radius: 30px;
+   display: inline-block;
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: antiquewhite;
+
+}
+.btn{
+    background-color: rgb(245, 37, 37);
+    border-radius: 30px;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color:rgb(222, 32, 32); ;
+}
+#input{
+    padding-right: 4.5rem;
+    padding-left: 1rem;
+    background: none;
+}
+#input, .btn{
+    border: none;
+    
+    outline: none;
+}
+.list{
+    display: flex;
+
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 5px;
+    flex-direction: column;
+    height: 48vh;
+    overflow-y:auto;
+    scrollbar-width:none;
+}
+.task-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.all-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.all-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.delete{
+    cursor: pointer;
+}
+.task{
+  
+    width: 10rem;
+    height: 1.1rem;
+    white-space: nowrap;
+   overflow-x: auto;
+   overflow-y: hidden;
+   scrollbar-width: none;
+  
+}
