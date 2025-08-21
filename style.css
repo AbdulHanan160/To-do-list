@@ -83,6 +83,10 @@ body{
     gap: 8px;
 
 }
+.status{
+    width: 4rem;
+    color: rgb(174, 170, 170);
+}
 
 .all-status{
     display: flex;

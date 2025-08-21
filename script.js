@@ -1,10 +1,10 @@
-let list=document.querySelector(".list")
-let btn=document.querySelector(".btn")
-let input_task=document.getElementById("input")
+let list = document.querySelector(".list")
+let btn = document.querySelector(".btn")
+let input_task = document.getElementById("input")
 
-const addtask=(input)=>{
-    let newtask =document.createElement("div")
-    newtask.innerHTML=`<div class="all-task">
+const addtask = (input) => {
+    let newtask = document.createElement("div")
+    newtask.innerHTML = `<div class="all-task">
                     <input class="check-box" type="checkbox">
                     <span class="task">${input}</span>
                 </div>
@@ -12,14 +12,31 @@ const addtask=(input)=>{
                     <span class="status">Pending</span>
                     <img src="images/delete.svg" alt="" class="delete">
                 </div>`
-                newtask.classList.add("task-list")
-                list.appendChild(newtask)
-                
+    newtask.classList.add("task-list")
+    list.appendChild(newtask)
+
+   
+statuschange()
 
 }
 
-btn.addEventListener("click",()=>{
+btn.addEventListener("click", () => {
     addtask(input_task.value)
+
 })
 
+const statuschange=()=>{
+    let check_box = document.querySelectorAll(".check-box")
+    check_box.forEach((e) => {
+        e.addEventListener("change", (element) => {
+            if (element.target.checked == true) {
+                element.target.parentElement.parentElement.children[1].children[0].innerHTML = "Completed"
+            } else {
+                element.target.parentElement.parentElement.children[1].children[0].innerHTML = "Pending"
+            }
 
+        })
+
+
+    })
+}
