@@ -132,3 +132,8 @@ window.addEventListener("load", () => {
 })
 
 
+window.addEventListener("keydown",(e)=>{
+if(e.key==="Enter"){
+    btn.click()
+}
+})
